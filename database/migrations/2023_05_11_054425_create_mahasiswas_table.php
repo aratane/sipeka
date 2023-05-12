@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('Alamat');
             $table->string('IPK');
             $table->string('Stambuk');
-            $table->string('KDKrs');
+            $table->string('KDKrs')->nullable();
             $table->enum('status_lulus', ['lulus', 'tidaklulus']);
             $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('users');

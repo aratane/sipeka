@@ -53,9 +53,9 @@ class DatabaseSeeder extends Seeder
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-        DB::table('kaprodi')->insert([
+        DB::table('dosen')->insert([
             'NIDN' => '21038289723',
-            'Nm_Donse' => 'Jaelani Muharam',
+            'Nm_Dosen' => 'Jaelani Muharam',
             'Prodi' => 'Teknik Informatika',
             'id' => '3',
             'created_at' => date("Y-m-d H:i:s"),
@@ -72,19 +72,10 @@ class DatabaseSeeder extends Seeder
             'Alamat' => 'Kota Bandung',
             'IPK' => '3',
             'Stambuk' => '20203',
-            'KDKrs' => '1',
             'status_lulus' => 'lulus',
             'id' => '4',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
-        ]);
-
-        DB::table('krs')->insert([
-            'id_krs' => '1',
-            'sks' => '144',
-            'ipk' => '3',
-            'stambuk' => '31231',
-            'NIM' => '20038289723',
         ]);
     }
 }
