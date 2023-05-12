@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'firstname' => 'Ihsan',
             'lastname' => 'Maulana',
-            'email' => 'sanji@aratadev.my.id',
+            'email' => 'sanji@gmail.com',
             'password' => bcrypt('sanji123')
         ]);
 
@@ -45,7 +45,6 @@ class DatabaseSeeder extends Seeder
             'id_akun' => '1',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
-
         ]);
     }
 }

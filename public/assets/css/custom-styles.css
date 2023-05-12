@@ -1,0 +1,97 @@
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+    input.inline-block.w-full.px-16.py-3\.5.mt-6.mb-0.m-0.font-bold.leading-normal.text-center.text-white.align-middle.transition-all.bg-blue-500.border-0.rounded-lg.cursor-pointer.hover\:-translate-y-px.active\:opacity-85.hover\:shadow-xs.text-sm.ease-in.tracking-tight-rem.shadow-md.bg-150.bg-x-25.mb-6.hidden.lg\:block.m-0 {
+    width: 20%;
+    /* margin: 0; */
+    right: 100;
+}
+    @media (min-width: 320px) {
+      .tiny\:flex-col {
+        flex-direction: column;
+      }
+    }
+
+    @media (min-width: 576px) {
+      .sm\:flex-col {
+        flex-direction: column;
+      }
+
+    }
+
+    body.m-0.font-sans.text-base.antialiased.font-normal.leading-default.text-slate-500 {
+      background-color: lightgray;
+    }
+
+    .absolute.w-full.bg-blue-500.dark\:hidden.min-h-75 {
+      height: 50vh;
+    }
+
+    .upload-textline {
+
+      margin-top: 2rem;
+      height: 10rem;
+
+    }
+
+    .mt-5rem {
+      margin-top: 5.5rem;
+    }
+
+    a.Browse-link {
+      text-decoration: underline;
+      color: blue;
+    }
+
+    .files-icons {
+      background: darkgray;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .relative.flex.flex-col.min-w-0.break-words.bg-white.shadow-xl.dark\:bg-slate-850.dark\:shadow-dark-xl.rounded-2xl.bg-clip-border.drop-files {
+      border-style: dashed;
+      margin-top: 2rem;
+      height: 10rem;
+      stroke-width: 10px;
+      stroke-dasharray: 25;
+      border-color: darkslategray;
+      border-width: medium;
+    }
+
+    .flex.flex-row.gap-5 {
+      gap: 2rem;
+    }
+
+    main {
+      height: 100vh;
+    }
+
+    .gap-5 {
+      gap: 2rem;
+    }
+    input#file {
+    width: 8rem;
+}
