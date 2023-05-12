@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('kaprodi', function (Blueprint $table) {
             $table->id('NIP');
-            $table->string('nama');
-            $table->string('prodi');
+            $table->string('Nm_Kaprodi');
+            $table->string('Prodi');
+            $table->string('Fakultas');
             $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('users');
             $table->timestamps();

@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mapels', function (Blueprint $table) {
-            $table->id('id_mapel');
-            $table->string('nama_mapel');
-            $table->string('sks_mapel');
+        Schema::create('dockrs', function (Blueprint $table) {
+            $table->id('Kd_Krs');
+            $table->string('Nm_Mahasiswa');
+            $table->string('Nm_DosenWali');
+            $table->unsignedBigInteger('NIDN');
+            $table->foreign('NIDN')->references('NIDN')->on('dosen');
+            $table->unsignedBigInteger('NIM');
+            $table->foreign('NIM')->references('NIM')->on('mahasiswa');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mapels');
+        //
     }
 };
