@@ -42,4 +42,19 @@ class PDFController extends Controller
 
         return $pdf->download('suratsk.pdf');
     }
+
+    public function generateKRS()
+    {
+        $users = User::get();
+
+        $data = [
+            'title' => 'Kartu Rencana Studi',
+            'date' => date('m/d/Y'),
+            'users' => $users
+        ];
+
+        $pdf = PDF::loadView('suratkrs', $data);
+
+        return $pdf->download('suratkrs.pdf');
+    }
 }
