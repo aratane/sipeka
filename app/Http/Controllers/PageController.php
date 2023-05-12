@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -15,20 +16,11 @@ class PageController extends Controller
     public function index(string $page)
     {
         if (view()->exists("pages.{$page}")) {
-            return view("pages.{$page}");
+            $pengajuan = Mahasiswa::latest()->paginate(5);
+            return view("pages.{$page}", compact('pengajuan'));
         }
 
         return abort(404);
-    }
-
-    public function vr()
-    {
-        return view("pages.virtual-reality");
-    }
-
-    public function rtl()
-    {
-        return view("pages.rtl");
     }
 
     public function profile()
