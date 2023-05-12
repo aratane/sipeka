@@ -17,6 +17,7 @@ class Mahasiswa extends Model
         'nama',
         'prodi',
         'fakultas',
+        'id_mapel',
         'alamat',
         'status_lulus',
         'id_akun'

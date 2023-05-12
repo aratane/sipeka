@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('country')->nullable();
             $table->string('postal')->nullable();
             $table->text('about')->nullable();
-            $table->rememberToken();
+            $table->enum('role', ['admin', 'kaprodi', 'mahasiswa'])->default('mahasiswa');
             $table->timestamps();
         });
     }

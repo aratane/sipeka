@@ -16,10 +16,13 @@ return new class extends Migration
             $table->string('nama');
             $table->string('prodi');
             $table->string('fakultas');
+            $table->unsignedBigInteger('id_mapel');
+            $table->string('jenis_kelamin');
+            $table->string('agama');
             $table->string('alamat');
             $table->enum('status_lulus', ['lulus', 'tidaklulus']);
-            $table->unsignedBigInteger('id_akun');
-            $table->foreign('id_akun')->references('id_akun')->on('akun');
+            $table->unsignedBigInteger('id');
+            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }

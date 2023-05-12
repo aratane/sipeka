@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id('NIP');
             $table->string('nama');
             $table->string('prodi');
-            $table->unsignedBigInteger('id_akun');
-            $table->foreign('id_akun')->references('id_akun')->on('akun');
+            $table->unsignedBigInteger('id');
+            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }
