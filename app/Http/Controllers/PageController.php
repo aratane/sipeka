@@ -20,8 +20,8 @@ class PageController extends Controller
         if (view()->exists("pages.{$page}")) {
             // Mahasiswa Data
             $mahasiswa = DB::table('mahasiswa')
-                ->join('users', 'mahasiswa.id', '=', 'users.id')
-                ->where('mahasiswa.id', '=', auth()->user()->id)
+                ->join('users', 'mahasiswa.NIM', '=', 'users.NIM')
+                ->where('mahasiswa.NIM', '=', auth()->user()->NIM)
                 ->get();
 
             $pengajuan = KRS::latest()->paginate(5);

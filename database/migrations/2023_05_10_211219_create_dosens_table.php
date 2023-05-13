@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id('NIDN');
             $table->string('Nm_Dosen');
             $table->string('Prodi');
-            $table->unsignedBigInteger('id');
-            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }

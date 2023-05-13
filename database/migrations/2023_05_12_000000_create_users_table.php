@@ -19,11 +19,12 @@ return new class extends Migration
             $table->string('email')->unique();
             // $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            // $table->string('address')->nullable();
-            // $table->string('city')->nullable();
-            // $table->string('country')->nullable();
-            // $table->string('postal')->nullable();
-            // $table->text('about')->nullable();
+            $table->unsignedBigInteger('NIM')->nullable();
+            $table->foreign('NIM')->references('NIM')->on('mahasiswa');
+            $table->unsignedBigInteger('NIDN')->nullable();
+            $table->foreign('NIDN')->references('NIDN')->on('dosen');
+            $table->unsignedBigInteger('NIP')->nullable();
+            $table->foreign('NIP')->references('NIP')->on('kaprodi');
             $table->enum('role', ['admin', 'kaprodi', 'dosen', 'mahasiswa'])->default('mahasiswa');
             $table->timestamps();
         });

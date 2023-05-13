@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('Nm_Kaprodi');
             $table->string('Prodi');
             $table->string('Fakultas');
-            $table->unsignedBigInteger('id');
-            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }

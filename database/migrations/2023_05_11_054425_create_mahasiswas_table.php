@@ -24,9 +24,9 @@ return new class extends Migration
             $table->unsignedBigInteger('No_Tlp');
             $table->string('Bio');
             $table->string('KDKrs')->nullable();
+            $table->unsignedBigInteger('NIDN');
+            $table->foreign('NIDN')->references('NIDN')->on('dosen');
             $table->enum('status_lulus', ['lulus', 'tidaklulus']);
-            $table->unsignedBigInteger('id');
-            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }

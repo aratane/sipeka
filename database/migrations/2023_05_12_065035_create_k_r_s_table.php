@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('Stambuk');
             $table->string('Prodi');
             $table->string('Fakultas');
-            $table->string('KD_Penasehat');
-            $table->string('Nm_Penasehat');
+            $table->string('Nm_Dosen');
             $table->string('IPKSebelumnya');
             $table->string('RencanaSKS');
             $table->string('Nm_Mahasiswa');
@@ -30,6 +29,8 @@ return new class extends Migration
             $table->string('Alamat');
             $table->unsignedBigInteger('NIM');
             $table->foreign('NIM')->references('NIM')->on('mahasiswa');
+            $table->unsignedBigInteger('NIDN');
+            $table->foreign('NIDN')->references('NIDN')->on('dosen');
             $table->timestamps();
         });
     }
