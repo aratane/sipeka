@@ -25,6 +25,7 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\PengajuanController;
+use App\Http\Controllers\BillingController;
 
 
 Route::get('/', function () {
@@ -32,6 +33,8 @@ Route::get('/', function () {
 })->middleware('auth');
 
 Route::get('pengajuan', [PengajuanController::class, 'pengajuan'])->name('pengajuan');
+Route::get('billing', [BillingController::class, 'index'])->name('billing');
+Route::get('billing/pembayaran', [BillingController::class, 'pembayaran'])->name('pembayaran');
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest')->name('register.perform');
