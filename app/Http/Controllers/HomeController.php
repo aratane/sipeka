@@ -43,7 +43,7 @@ class HomeController extends Controller
 		]);
 
         return back()
-        ->with('success','File has been uploaded.')
+        ->with('succes','File Berhasil di Upload.')
         ->with('file', $fileName);
     }
 }

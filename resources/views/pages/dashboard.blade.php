@@ -98,6 +98,9 @@
                         </h6>
                     </div>
                 </div>
+                <div id="alert">
+                    @include('components.alert')
+                </div>
                 <div class="card-header col-lg-12">
                     <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
                         @csrf
