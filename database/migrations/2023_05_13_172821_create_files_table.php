@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('dockrs', function (Blueprint $table) {
-            $table->id('Kd_Krs');
+            $table->id('id_file');
             $table->string('Nm_Mahasiswa')->nullable();
             $table->string('Nm_DosenWali');
             $table->unsignedBigInteger('NIDN');
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('files');
+        Schema::dropIfExists('dockrs');
     }
 };
