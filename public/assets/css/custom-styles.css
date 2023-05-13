@@ -1,3 +1,15 @@
+.custom-subhead-font2 {
+    font-size: 20px;
+}
+.custom-subhead-font3 {
+    font-weight: bolder;
+}
+.ini-judul:hover{
+    transform: scale(1.2);
+    transition-duration: 0.4s;
+/*    animation-duration: 5s;*/
+  
+}
 .ini-judul{
 
 }
