@@ -118,12 +118,7 @@
                                             <div>
                                                 <h6 class="mb-2 font-bold text-center dark:text-white">
                                                     Drag and drop files,or
-<<<<<<< HEAD
                                                     <input aria-label="File browser example" class="custom-file-input" name="file" placeholder="some files" type="file"/>
-=======
-                                                    <input aria-label="File browser example" class="custom-file-input"
-                                                        id="file" placeholder="some files" type="file" />
->>>>>>> 5f0b5be3bc8c91ef8d64565b57d6f0d30c1ad1fe
                                                 </h6>
                                             </div>
                                         </div>
