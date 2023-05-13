@@ -87,16 +87,6 @@ class DatabaseSeeder extends Seeder
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
-<<<<<<< HEAD
-        DB::table('krs')->insert([
-            'id_krs' => '1',
-            'SKS' => '144',
-            'KD_Penasehat' => '1',
-            'Nm_Penasehat' => 'Agus',
-            'IPKSebelumnya' => '2',
-            'RencanaSKS' => '8 SKS',
-            'NIM' => '20038289723',
-=======
         DB::table('mahasiswa')->insert([
             'NIM' => '2002828972',
             'Nm_Mahasiswa' => 'Hilman Syaputra',
@@ -111,7 +101,6 @@ class DatabaseSeeder extends Seeder
             'id' => '5',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
->>>>>>> 4db5014cd09c40c0c37209c4b8a9d8892662edaa
         ]);
         DB::table('transaksi')->insert([
             'id_transaksi' => '31213',
