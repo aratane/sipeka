@@ -23,28 +23,9 @@
                                             class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
                                 </div>
                                 <div class="ms-auto text-end">
-
-
-                                    <button class="btn bg-gradient-warning ">Pembayaran</button>
+                                    <a href="{{ url('/billing/pembayaran') }}" class="btn bg-gradient-warning">Pembayaran</a>
                                 </div>
                             </li>
-                            <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-                                <div class="d-flex flex-column">
-                                    <h6 class="mb-3 text-sm">Praktek Kerja MIT</h6>
-                                    <span class="mb-2 text-xs">Company Name: <span
-                                            class="text-dark font-weight-bold ms-sm-2">Media Indo Teknologi</span></span>
-                                    <span class="mb-2 text-xs">Email Address: <span
-                                            class="text-dark ms-sm-2 font-weight-bold">MIT@stone-tech.com</span></span>
-                                    <span class="text-xs">ID Transaksi<span
-                                            class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
-                                </div>
-                                <div class="ms-auto text-end">
-
-
-                                    <button class="btn bg-gradient-warning ">Pembayaran</button>
-                                </div>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -65,9 +46,7 @@
                                             class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
                                 </div>
                                 <div class="ms-auto text-end">
-
-                                    <button type="button" class="btn btn-info">Lihat Detail</button>
-
+                                <a href="/" type="button" class="btn btn-info">Lihat Detail</a>
                                 </div>
                             </li>
                             <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
