@@ -1,7 +1,8 @@
 @extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
 
 @section('content')
-<div class="position-absolute w-100 min-height-300 top-0" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg'); background-position-y: 50%;">
+<div class="position-absolute w-100 min-height-300 top-0"
+    style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg'); background-position-y: 50%;">
     <span class="mask bg-primary opacity-6">
     </span>
 </div>
@@ -48,48 +49,61 @@
                         </h6>
                         <div class="container carousel-slider d-none d-md-flex row justify-content-center">
                             <input checked="" class="d-none" id="s1" name="slider" type="radio">
-                                <input class="d-none" id="s2" name="slider" type="radio">
-                                    <div class="cards h-100">
-                                        <label for="s1" id="slide1">
-                                            <div class="card row">
-                                                <div class="infos p-0 col-7">
-                                                    <span class="lorem">
-                                                        Mahasiswa telah melakukan pengisian KRS (Kartu Rencana Studi) dan telah di approve dosen wali yang bersangkutan
-                                                    </span>
-                                                </div>
-                                                <div class="infos p-0 col-4 ">
-                                                    <img alt="" class="imejii " height="40rem" sizes="cover" src="assets/img/bg-profile.jpg" width="170px">
-                                                    </img>
-                                                </div>
-                                            </div>
-                                        </label>
-                                        <label for="s2" id="slide2">
-                                            <div class="card">
-                                                <div class="infos p-0">
-                                                    <span class="lorem">
-                                                        Mahasiswa diharuskan lulus di mata kuliahnya terlebih dahulu
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </label>
+                            <input class="d-none" id="s2" name="slider" type="radio">
+                            <div class="cards h-100">
+                                <label for="s1" id="slide1">
+                                    <div class="card row">
+                                        <div class="infos p-0 col-7">
+                                            <span class="lorem">
+                                                Mahasiswa telah melakukan pengisian KRS (Kartu Rencana Studi) dan telah
+                                                di approve dosen wali yang bersangkutan
+                                            </span>
+                                        </div>
+                                        <div class="infos p-0 col-4 ">
+                                            <img alt="" class="imejii " height="40rem" sizes="cover"
+                                                src="assets/img/bg-profile.jpg" width="170px">
+                                            </img>
+                                        </div>
                                     </div>
-                                </input>
+                                </label>
+                                <label for="s2" id="slide2">
+                                    <div class="card">
+                                        <div class="infos p-0">
+                                            <span class="lorem">
+                                                Mahasiswa diharuskan lulus di mata kuliahnya terlebih dahulu
+                                            </span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            </input>
                             </input>
                         </div>
                     </div>
                 </div>
-                                @can('isMahasiswa')
+                @can('isMahasiswa')
                 <div class="card-header col-lg-12">
                     <div class="d-flex justify-content-around gap-4">
-                        <h6 class="col-lg-4 card badge badge-info bg-info custom-subhead-font2">Status Kelulusan</h6><h6 class="col-lg-7 badge badge-success bg-success card custom-subhead-font2">LULUS</h6></div>
-                <div class="d-flex justify-content-around gap-4">
-                        <div class="col-lg-4 card bg-primary h-1 mb-2"></div><div class="col-lg-7 card bg-secondary h-1 mb-2"></div></div><div class="d-flex justify-content-around gap-4">
-                        <h6 class="col-lg-4 card badge badge-info bg-info custom-subhead-font2">Status Pengisian KRS</h6><h6 class="col-lg-7 badge badge-success bg-secondary card custom-subhead-font2">belum di approve</h6></div></div>
+                        <h6 class="col-lg-4 card badge badge-info bg-info custom-subhead-font2">Status Kelulusan</h6>
+                        <h6 class="col-lg-7 badge badge-success bg-success card custom-subhead-font2">LULUS</h6>
+                    </div>
+                    <div class="d-flex justify-content-around gap-4">
+                        <div class="col-lg-4 card bg-primary h-1 mb-2"></div>
+                        <div class="col-lg-7 card bg-secondary h-1 mb-2"></div>
+                    </div>
+                    <div class="d-flex justify-content-around gap-4">
+                        <h6 class="col-lg-4 card badge badge-info bg-info custom-subhead-font2">Status Pengisian KRS
+                        </h6>
+                        <h6 class="col-lg-7 badge badge-success bg-secondary card custom-subhead-font2">belum di approve
+                        </h6>
+                    </div>
+                </div>
                 <div class="card-header col-lg-12">
                     <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="d-flex justify-content-between gap-5">
-                            <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border drop-files mt-0 mr-5 col-6">
+                            <div
+                                class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border drop-files mt-0 mr-5 col-6">
                                 <div class="flex-auto p-4">
                                     <div class="flex flex-row -mx-3 justify-center">
                                         <div class="bg-black files-icons flex-none max-w-full px-3">
@@ -104,7 +118,12 @@
                                             <div>
                                                 <h6 class="mb-2 font-bold text-center dark:text-white">
                                                     Drag and drop files,or
+<<<<<<< HEAD
                                                     <input aria-label="File browser example" class="custom-file-input" name="file" placeholder="some files" type="file"/>
+=======
+                                                    <input aria-label="File browser example" class="custom-file-input"
+                                                        id="file" placeholder="some files" type="file" />
+>>>>>>> 5f0b5be3bc8c91ef8d64565b57d6f0d30c1ad1fe
                                                 </h6>
                                             </div>
                                         </div>
@@ -115,7 +134,8 @@
                                 Upload Dokumen Pengajuan Praktek Kerja
                             </h6>
                         </div>
-                        <input class="btn btn-primary float-right mt-5 col-12" name="Upload" placeholder="Upload" type="submit" value="Upload">
+                        <input class="btn btn-primary float-right mt-5 col-12" name="Upload" placeholder="Upload"
+                            type="submit" value="Upload">
                         </input>
                     </form>
                 </div>
@@ -133,22 +153,28 @@
                                     <table class="table align-items-center mb-0">
                                         <thead>
                                             <tr>
-                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                     #
                                                 </th>
-                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                     NAMA MAHASISWA
                                                 </th>
-                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                                     PRODI
                                                 </th>
-                                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                     STATUS KELULUSAN MATKUL
                                                 </th>
-                                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                     TANGGAL
                                                 </th>
-                                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                     Action
                                                 </th>
                                             </tr>
@@ -162,7 +188,8 @@
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
                                                         <div>
-                                                            <img alt="user1" class="avatar avatar-sm me-3" src="/img/team-2.jpg">
+                                                            <img alt="user1" class="avatar avatar-sm me-3"
+                                                                src="/img/team-2.jpg">
                                                             </img>
                                                         </div>
                                                         <div class="d-flex flex-column justify-content-center">
@@ -194,17 +221,22 @@
                                                     </span>
                                                 </td>
                                                 <td class="align-middle text-center">
-                                                    <button class="text-white btn btn-info font-weight-bold text-xs" data-bs-target="#exampleModal" data-bs-toggle="modal" data-bs-whatever="@getbootstrap" data-original-title="Edit user" data-toggle="tooltip">
+                                                    <button class="text-white btn btn-info font-weight-bold text-xs"
+                                                        data-bs-target="#exampleModal" data-bs-toggle="modal"
+                                                        data-bs-whatever="@getbootstrap" data-original-title="Edit user"
+                                                        data-toggle="tooltip">
                                                         LIHAT DOKUMEN
                                                     </button>
-                                                    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+                                                    <div aria-hidden="true" aria-labelledby="exampleModalLabel"
+                                                        class="modal fade" id="exampleModal" tabindex="-1">
                                                         <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
                                                                     <h5 class="modal-title" id="exampleModalLabel">
                                                                         Pengajuan Prakek Kerja
                                                                     </h5>
-                                                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                                                                    <button aria-label="Close" class="btn-close"
+                                                                        data-bs-dismiss="modal" type="button">
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
@@ -215,36 +247,43 @@
                                                                         <!-- <iframe src = "ViewerJS/#../doc/KRS.pdf" width='400' height='300' allowfullscreen webkitallowfullscreen></iframe> -->
                                                                         <div id="adobe-dc-view">
                                                                         </div>
-                                                                        <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js" type="text/javascript">
+                                                                        <script
+                                                                            src="https://acrobatservices.adobe.com/view-sdk/viewer.js"
+                                                                            type="text/javascript">
                                                                         </script>
                                                                         <div class="mb-3">
-                                                                            <label class="col-form-label" for="recipient-name">
+                                                                            <label class="col-form-label"
+                                                                                for="recipient-name">
                                                                                 Dokumen Pengajuan
                                                                             </label>
                                                                             <br>
-                                                                                <button class="btn btn-primary">
-                                                                                    <a class="text-white" href="download/Pengajuan_Kerja.pdf">
-                                                                                        Unduh Dokumen
-                                                                                    </a>
-                                                                                </button>
+                                                                            <button class="btn btn-primary">
+                                                                                <a class="text-white"
+                                                                                    href="download/Pengajuan_Kerja.pdf">
+                                                                                    Unduh Dokumen
+                                                                                </a>
+                                                                            </button>
                                                                             </br>
                                                                         </div>
                                                                         <div class="mb-3">
-                                                                            <label class="col-form-label" for="message-text">
+                                                                            <label class="col-form-label"
+                                                                                for="message-text">
                                                                                 KRS
                                                                             </label>
                                                                             <br>
-                                                                                <button class="btn btn-primary">
-                                                                                    <a class="text-white" href="download/KRS.pdf">
-                                                                                        Unduh Dokumen
-                                                                                    </a>
-                                                                                </button>
+                                                                            <button class="btn btn-primary">
+                                                                                <a class="text-white"
+                                                                                    href="download/KRS.pdf">
+                                                                                    Unduh Dokumen
+                                                                                </a>
+                                                                            </button>
                                                                             </br>
                                                                         </div>
                                                                     </form>
                                                                 </div>
                                                                 <div class="modal-footer">
-                                                                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">
+                                                                    <button class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal" type="button">
                                                                         Close
                                                                     </button>
                                                                     <button class="btn btn-primary" type="button">

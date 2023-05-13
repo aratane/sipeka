@@ -13,7 +13,9 @@
                                 Surat Pengantar Kerja Praktek
                             </a>
                             <p class="card-description mb-4">
-                                Surat pengantar ini berperan penting dan memudahkan mahasiswa untuk mendapatkan izin dari pihak perusahaan atau institusi,serta membantu memperjelas tujuan dan maksud dari praktek kerja yang akan dilakukan
+                                Surat pengantar ini berperan penting dan memudahkan mahasiswa untuk mendapatkan izin dari pihak
+                                perusahaan atau institusi,serta membantu memperjelas tujuan dan maksud dari praktek kerja yang
+                                akan dilakukan
                             </p>
                             <div class="author align-items-center">
                                 <i class="ni ni-collection text-warning text-sm opacity-10"></i>
@@ -42,7 +44,7 @@
                             <div class="author align-items-center">
                                 <i class="ni ni-collection text-warning text-sm opacity-10"></i>
                                 <div class="name ps-3">
-                                    <span><a href="{{ route('page', ['page' => 'suratkrs']) }}">KLIK UNTUK
+                                    <span><a href="{{ route('page', ['page' => 'krstudi']) }}">KLIK UNTUK
                                             GENERATE</a></span>
                                     <div class="stats">
                                         <small>Universitas Contoh</small>
@@ -60,7 +62,9 @@
                                 Surat Pengantar SK Kerja Praktek
                             </a>
                             <p class="card-description mb-4">
-                                Surat pengantar ini berperan penting dan memudahkan mahasiswa untuk mendapatkan izin dari pihak perusahaan atau institusi,serta membantu memperjelas tujuan dan maksud dari praktek kerja yang akan dilakukan
+                                Surat pengantar ini berperan penting dan memudahkan mahasiswa untuk mendapatkan izin dari pihak
+                                perusahaan atau institusi,serta membantu memperjelas tujuan dan maksud dari praktek kerja yang
+                                akan dilakukan
                             </p>
                             <div class="author align-items-center">
                                 <i class="ni ni-collection text-warning text-sm opacity-10"></i>
