@@ -7,8 +7,11 @@
         <div class="row">
             <div class="col-md-7 mt-4">
                 <div class="card">
+                    @foreach ($transaksi as $d)
+                    @if($d->status_transaksi == 'belum_bayar')
                     <div class="card-header pb-0 px-3">
                         <h6 class="mb-0">Transaksi Berlangsung</h6>
+                        @include('sweetalert::alert')
                     </div>
                     <div class="card-body pt-4 p-3">
                         <ul class="list-group">
@@ -20,34 +23,16 @@
                                     <span class="mb-2 text-xs">Email Address: <span
                                             class="text-dark ms-sm-2 font-weight-bold">gagapdesign@burrito.com</span></span>
                                     <span class="text-xs">ID Transaksi<span
-                                            class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                                            class="text-dark ms-sm-2 font-weight-bold">{{ $d->id_transaksi}}</span></span>
                                 </div>
                                 <div class="ms-auto text-end">
-
-
-                                    <button class="btn bg-gradient-warning ">Pembayaran</button>
+                                    <a href="{{ url('/billing/update/'. $d->id_transaksi) }}" class="btn bg-gradient-warning">Pembayaran</a>
                                 </div>
                             </li>
-                            <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-                                <div class="d-flex flex-column">
-                                    <h6 class="mb-3 text-sm">Praktek Kerja MIT</h6>
-                                    <span class="mb-2 text-xs">Company Name: <span
-                                            class="text-dark font-weight-bold ms-sm-2">Media Indo Teknologi</span></span>
-                                    <span class="mb-2 text-xs">Email Address: <span
-                                            class="text-dark ms-sm-2 font-weight-bold">MIT@stone-tech.com</span></span>
-                                    <span class="text-xs">ID Transaksi<span
-                                            class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
-                                </div>
-                                <div class="ms-auto text-end">
-
-
-                                    <button class="btn bg-gradient-warning ">Pembayaran</button>
-                                </div>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
+                @elseif($d->status_transaksi == 'selesai')
                 <div class="card mt-4">
                     <div class="card-header pb-0 px-3">
                         <h6 class="mb-0">Transaksi Selesai</h6>
@@ -65,31 +50,14 @@
                                             class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
                                 </div>
                                 <div class="ms-auto text-end">
-
-                                    <button type="button" class="btn btn-info">Lihat Detail</button>
-
+                                <a href="/" type="button" class="btn btn-info">Lihat Detail</a>
                                 </div>
                             </li>
-                            <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
-                                <div class="d-flex flex-column">
-                                    <h6 class="mb-3 text-sm">Praktek Kerja MIT</h6>
-                                    <span class="mb-2 text-xs">Company Name: <span
-                                            class="text-dark font-weight-bold ms-sm-2">Media Indo Teknologi</span></span>
-                                    <span class="mb-2 text-xs">Email Address: <span
-                                            class="text-dark ms-sm-2 font-weight-bold">MIT@stone-tech.com</span></span>
-                                    <span class="text-xs">ID Transaksi<span
-                                            class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
-                                </div>
-                                <div class="ms-auto text-end">
-
-
-                                    <button type="button" class="btn btn-info">Lihat Detail</button>
-                                </div>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
+                @endif
+                @endforeach
             </div>
             <div class="col-md-5 mt-4">
                 <div class="card h-100 mb-4">
