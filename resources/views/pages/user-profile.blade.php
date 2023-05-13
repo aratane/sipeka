@@ -32,6 +32,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
+                    @foreach ($mahasiswa as $m)
                     <form role="form" method="POST" action={{ route('profile.update') }} enctype="multipart/form-data">
                         @csrf
                         <div class="card-header pb-0">
@@ -58,34 +59,34 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Nama Mahasiswa</label>
-                                        <input class="form-control" type="text" name="firstname" value="" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Nama' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="Nm_Mahasiswa" value="{{ $m->Nm_Mahasiswa}}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Nama' From Table 'Mahasiswa'">
                                     </div>
                                 </div>
                                 
                             <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Jenis Kelamin</label>
-                                        <input class="form-control" type="text" name="firstname" value="" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'JK' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="JK" value="{{ $m->JK}}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'JK' From Table 'Mahasiswa'">
                                     </div>
                                 </div><div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Fakultas</label>
-                                        <input class="form-control" type="text" name="firstname" value="" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Fakultas' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="Fakultas" value="{{ $m->Fakultas}}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Fakultas' From Table 'Mahasiswa'">
                                     </div>
                                 </div><div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Prodi</label>
-                                        <input class="form-control" type="text" name="firstname" value="" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Prodi' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="firstname" value="{{ $m->Prodi}}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Prodi' From Table 'Mahasiswa'">
                                     </div>
                                 </div><div class="col-md-4">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Agama</label>
-                                        <input class="form-control" type="text" name="firstname" value="" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Agama' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="firstname" value="{{ $m->Agama }}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Agama' From Table 'Mahasiswa'">
                                     </div>
                                 </div><div class="col-md-8">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">NIM</label>
-                                        <input class="form-control" type="text" name="firstname" value="" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'NIM' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="firstname" value="{{ $m->NIM }}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'NIM' From Table 'Mahasiswa'">
                                     </div>
                                 </div></div>
                             <hr class="horizontal dark">
@@ -95,14 +96,14 @@
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Alamat</label>
                                         <input class="form-control" type="text" name="address"
-                                            value="{{ old('address', auth()->user()->address) }}">
+                                            value="{{ $m->Alamat}}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">No Telp</label>
                                         <input class="form-control" type="text" name="about"
-                                            value="{{ old('about', auth()->user()->about) }}">
+                                            value="{{ $m->No_Tlp}}">
                                     </div>
                                 </div>
 
@@ -139,13 +140,14 @@
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Bio</label>
                                         <input class="form-control" type="text" name="about"
-                                            value="{{ old('about', auth()->user()->about) }}">
+                                            value="{{ $m->Bio}}">
                                     </div>
                                 </div>
                                 
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
             <div class="col-md-4">
@@ -172,15 +174,14 @@
                                         <span
                                             class="text-lg font-weight-bolder">{{ old('firstname', auth()->user()->firstname) }}
                                             {{ old('lastname', auth()->user()->lastname) }}</span>
-                                        <span class="text-sm opacity-8">Fakultas Teknik</span>
+                                        <span class="text-sm opacity-8">{{ $m->Fakultas}}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-center mt-4">
-
                             <div class="h6 font-weight-300 d-flex justify-content-center gap-2 align-items-center">
-                                <i class="ni ni-pin-3 location_pin "></i>Teknik Informatika
+                                <i class="ni ni-pin-3 location_pin "></i>{{ $m->Prodi}}
                             </div>
                             <div class="h6 my-4">
                                 <i class="ni business_briefcase-24 mr-2"></i>Dosen Pembimbing - Tegar Firmansyah
@@ -193,6 +194,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
         @include('layouts.footers.auth.footer')
     </div>
 

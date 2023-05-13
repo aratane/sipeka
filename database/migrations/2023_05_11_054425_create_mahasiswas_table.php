@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('Alamat');
             $table->string('IPK');
             $table->string('Stambuk');
+            $table->unsignedBigInteger('No_Tlp');
+            $table->string('Bio');
             $table->string('KDKrs')->nullable();
             $table->enum('status_lulus', ['lulus', 'tidaklulus']);
             $table->unsignedBigInteger('id');

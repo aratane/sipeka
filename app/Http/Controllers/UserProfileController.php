@@ -4,15 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 
 class UserProfileController extends Controller
 {
     public function show()
     {
-        return view('pages.user-profile');
+        $mahasiswa = DB::table('mahasiswa')
+            ->join('users', 'mahasiswa.id', '=', 'users.id')
+            ->where('mahasiswa.id', '=', auth()->user()->id)
+            ->get();
+        // dd($mahasiswa);
+        return view('pages.user-profile',compact('mahasiswa'));
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $NIM)
     {
         $attributes = $request->validate([
             'username' => ['required','max:255', 'min:2'],
@@ -28,15 +34,12 @@ class UserProfileController extends Controller
 
         auth()->user()->update([
             'username' => $request->get('username'),
-            'firstname' => $request->get('firstname'),
-            'lastname' => $request->get('lastname'),
-            'email' => $request->get('email') ,
-            'address' => $request->get('address'),
-            'city' => $request->get('city'),
-            'country' => $request->get('country'),
-            'postal' => $request->get('postal'),
-            'about' => $request->get('about')
+            'email' => $request->get('email'),
+            'Nm_Mahasiswa' => $request->get('Nm_Mahasiswa'),
+            'JK' => $request->get('JK'),
+            'Fakultas' => $request->get('Fakultas'),
         ]);
+            //BARU BISA UPDATE USERNAME SAMA EMAIL   
         return back()->with('succes', 'Profile succesfully updated');
     }
 }
