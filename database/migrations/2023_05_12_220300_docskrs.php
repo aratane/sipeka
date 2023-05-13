@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('dockrs', function (Blueprint $table) {
             $table->id('Kd_Krs');
-            $table->string('Nm_Mahasiswa');
+            $table->string('Nm_Mahasiswa')->nullable();
             $table->string('Nm_DosenWali');
             $table->unsignedBigInteger('NIDN');
             $table->foreign('NIDN')->references('NIDN')->on('dosen');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
@@ -16,8 +17,14 @@ class PageController extends Controller
     public function index(string $page)
     {
         if (view()->exists("pages.{$page}")) {
+            // Mahasiswa Data
+            $mahasiswa = DB::table('mahasiswa')
+                ->join('users', 'mahasiswa.id', '=', 'users.id')
+                ->where('mahasiswa.id', '=', auth()->user()->id)
+                ->get();
+
             $pengajuan = Mahasiswa::latest()->paginate(5);
-            return view("pages.{$page}", compact('pengajuan'));
+            return view("pages.{$page}", compact('pengajuan', 'mahasiswa'));
         }
 
         return abort(404);
