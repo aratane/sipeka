@@ -64,28 +64,10 @@
                                         <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                                     </td>
                                     <td class="align-middle text-center">
-                                    <template id="lihatdoc">
-    <swal-title>
-        Save changes to "Untitled 1" before closing?
-    </swal-title>
-    <swal-icon type="warning" color="red"></swal-icon>
-    <swal-button type="confirm">
-        Save As
-    </swal-button>
-    <swal-button type="cancel">
-        Cancel
-    </swal-button>
-    <swal-button type="deny">
-        Close without Saving
-    </swal-button>
-    <swal-param name="allowEscapeKey" value="false" />
-    <swal-param name="customClass" value='{ "popup": "my-popup" }' />
-    <swal-function-param name="didOpen" value="popup => console.log(popup)" />
-</template>
+                                    
                                         <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"  class="text-white btn btn-info font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                             LIHAT DOKUMEN
                                         </button>
-
                                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -135,9 +117,9 @@
             </div>
         </div>
         
+
     
     </div>
-       
     @include('layouts.footers.auth.footer')
 </div>
 @endsection

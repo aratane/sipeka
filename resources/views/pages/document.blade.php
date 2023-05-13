@@ -13,9 +13,7 @@
                                 Surat Pengantar Kerja Praktek
                             </a>
                             <p class="card-description mb-4">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit quas iste laborum accusantium
-                                aut! Omnis cupiditate quo facilis accusamus officia vero accusantium! Assumenda, eum! Officiis
-                                maxime dolorem molestias libero maiores!
+                                Surat pengantar ini berperan penting dan memudahkan mahasiswa untuk mendapatkan izin dari pihak perusahaan atau institusi,serta membantu memperjelas tujuan dan maksud dari praktek kerja yang akan dilakukan
                             </p>
                             <div class="author align-items-center">
                                 <i class="ni ni-collection text-warning text-sm opacity-10"></i>
@@ -44,7 +42,7 @@
                             <div class="author align-items-center">
                                 <i class="ni ni-collection text-warning text-sm opacity-10"></i>
                                 <div class="name ps-3">
-                                    <span><a href="{{ route('page', ['page' => 'krstudi']) }}">KLIK UNTUK
+                                    <span><a href="{{ route('page', ['page' => 'suratkrs']) }}">KLIK UNTUK
                                             GENERATE</a></span>
                                     <div class="stats">
                                         <small>Universitas Contoh</small>
@@ -62,9 +60,7 @@
                                 Surat Pengantar SK Kerja Praktek
                             </a>
                             <p class="card-description mb-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure itaque, deleniti suscipit
-                                numquam exercitationem quia, totam maxime repellendus animi cumque nam quam. Aliquam temporibus
-                                alias molestias suscipit sapiente. Delectus.
+                                Surat pengantar ini berperan penting dan memudahkan mahasiswa untuk mendapatkan izin dari pihak perusahaan atau institusi,serta membantu memperjelas tujuan dan maksud dari praktek kerja yang akan dilakukan
                             </p>
                             <div class="author align-items-center">
                                 <i class="ni ni-collection text-warning text-sm opacity-10"></i>
