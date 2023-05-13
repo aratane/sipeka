@@ -31,8 +31,6 @@ use App\Http\Controllers\BillingController;
 Route::get('/', function () {
     return redirect('/dashboard');
 })->middleware('auth');
-
-Route::get('pengajuan', [PengajuanController::class, 'pengajuan'])->name('pengajuan');
 Route::get('billing', [BillingController::class, 'index'])->name('billing');
 Route::get('/billing/update/', [BillingController::class, 'update'])->name('update');
 
@@ -50,6 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
     Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+    Route::resource('/pengajuan', \App\Http\Controllers\PengajuanController::class);
 
     Route::get('/{page}', [PageController::class, 'index'])->name('page');
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');

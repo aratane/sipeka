@@ -13,10 +13,19 @@ class KRS extends Model
 
     protected $fillable = [
         'id_krs',
-        'sks',
-        'ipk',
-        'stambuk',
-        'NIM',
-        'id_penasehat'
+        'IPK',
+        'SKS',
+        'Stambuk',
+        'Prodi',
+        'Fakultas',
+        'KD_Penasehat',
+        'Nm_Penasehat',
+        'IPKSebelumnya',
+        'RencanaSKS',
+        'Nm_Mahasiswa',
+        'JK',
+        'Agama',
+        'Alamat',
+        'NIM'
     ];
 }

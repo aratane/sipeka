@@ -23,9 +23,10 @@
     <div id="alert">
         @include('components.alert')
     </div>
+
     <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <form role="form" method="POST" action={{ route('profile.update') }} enctype="multipart/form-data">
                         @csrf
@@ -112,50 +113,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-profile">
-                    <img src="/img/bg-profile.jpg" alt="Image placeholder" class="card-img-top">
-                    <div class="row justify-content-center">
-                        <div class="col-4 col-lg-4 order-lg-2">
-                            <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
-                                <a href="javascript:;">
-                                    <img src="/img/team-2.jpg"
-                                        class="rounded-circle img-fluid border border-2 border-white">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header text-center border-0 pt-0 pt-lg-2 pb-4 pb-lg-3">
-
-                    </div>
-                    <div class="card-body pt-0">
-                        <div class="row">
-                            <div class="col">
-                                <div class="d-flex justify-content-center">
-                                    <div class="d-grid text-center">
-                                        <span
-                                            class="text-lg font-weight-bolder">{{ old('firstname', auth()->user()->firstname) }}
-                                            {{ old('lastname', auth()->user()->lastname) }}</span>
-                                        <span class="text-sm opacity-8">Fakultas Teknik</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-4">
-
-                            <div class="h6 font-weight-300 d-flex justify-content-center gap-2 align-items-center">
-                                <i class="ni ni-pin-3 location_pin "></i>Teknik Informatika
-                            </div>
-                            <div class="h6 my-4">
-                                <i class="ni business_briefcase-24 mr-2"></i>Dosen Pembimbing - Tegar Firmansyah
-                            </div>
-                            <div>
-                                <i class="ni education_hat mr-2"></i>University of Computer Science
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

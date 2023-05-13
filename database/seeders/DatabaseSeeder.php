@@ -43,6 +43,13 @@ class DatabaseSeeder extends Seeder
             'role' => 'mahasiswa',
         ]);
 
+        DB::table('users')->insert([
+            'username' => 'hilman',
+            'email' => 'hilman@gmail.com',
+            'password' => bcrypt('tegar123'),
+            'role' => 'mahasiswa',
+        ]);
+
         DB::table('kaprodi')->insert([
             'NIP' => '20038289723',
             'Nm_Kaprodi' => 'Tegar Firmansyah',
@@ -78,6 +85,7 @@ class DatabaseSeeder extends Seeder
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
 
+<<<<<<< HEAD
         DB::table('krs')->insert([
             'id_krs' => '1',
             'SKS' => '144',
@@ -86,6 +94,22 @@ class DatabaseSeeder extends Seeder
             'IPKSebelumnya' => '2',
             'RencanaSKS' => '8 SKS',
             'NIM' => '20038289723',
+=======
+        DB::table('mahasiswa')->insert([
+            'NIM' => '2002828972',
+            'Nm_Mahasiswa' => 'Hilman Syaputra',
+            'Prodi' => 'Teknik Elektro',
+            'Fakultas' => 'Elektronika',
+            'JK' => 'Laki-Laki',
+            'Agama' => 'islam',
+            'Alamat' => 'Kota Bandung',
+            'IPK' => '3',
+            'Stambuk' => '20303',
+            'status_lulus' => 'lulus',
+            'id' => '5',
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s"),
+>>>>>>> 4db5014cd09c40c0c37209c4b8a9d8892662edaa
         ]);
         DB::table('transaksi')->insert([
             'id_transaksi' => '31213',
