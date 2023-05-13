@@ -82,9 +82,41 @@
     <swal-param name="customClass" value='{ "popup": "my-popup" }' />
     <swal-function-param name="didOpen" value="popup => console.log(popup)" />
 </template>
-                                        <button onclick="lihatdocs()"  class="text-white btn btn-info font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"  class="text-white btn btn-info font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                             LIHAT DOKUMEN
                                         </button>
+
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pengajuan Prakek Kerja</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <p>Validasi Pengajuan Praktek Kerja</p>
+        
+        <!-- <iframe src = "ViewerJS/#../doc/KRS.pdf" width='400' height='300' allowfullscreen webkitallowfullscreen></iframe> -->
+        <div id="adobe-dc-view"></div>
+    <script type="text/javascript" src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>  
+        <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Dokumen Pengajuan</label><br>
+            <button class="btn btn-primary"><a class="text-white" href="download/Pengajuan_Kerja.pdf">Unduh Dokumen</a></button>
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">KRS</label><br>
+            <button class="btn btn-primary"><a class="text-white" href="download/KRS.pdf">Unduh Dokumen</a></button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Approve</button>
+      </div>
+    </div>
+  </div>
+</div>
                                         
                                         
                                         
@@ -103,17 +135,9 @@
             </div>
         </div>
         
-    <script type="text/javascript" src="https://cloudpdf.io/viewer.min.js"></script>
-    <script>
-      const config = { 
-        documentId: 'eee2079d-b0b6-4267-9812-b6b9eadb9c60',
-        darkMode: true
-      };
-      CloudPDF(config, document.getElementById('viewer')).then((instance) => {
-        
-      });
-    </script>
+    
     </div>
+       
     @include('layouts.footers.auth.footer')
 </div>
 @endsection
