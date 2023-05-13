@@ -76,7 +76,7 @@
                                 </div><div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Prodi</label>
-                                        <input class="form-control" type="text" name="firstname" value="{{ $m->Prodi}}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Prodi' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="Prodi" value="{{ $m->Prodi}}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Prodi' From Table 'Mahasiswa'">
                                     </div>
                                 </div><div class="col-md-4">
                                     <div class="form-group">

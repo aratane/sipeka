@@ -18,7 +18,7 @@ class UserProfileController extends Controller
         return view('pages.user-profile',compact('mahasiswa'));
     }
 
-    public function update(Request $request, $NIM)
+    public function update(Request $request)
     {
         $attributes = $request->validate([
             'username' => ['required','max:255', 'min:2'],
@@ -36,6 +36,7 @@ class UserProfileController extends Controller
             'username' => $request->get('username'),
             'email' => $request->get('email'),
             'Nm_Mahasiswa' => $request->get('Nm_Mahasiswa'),
+            'Prodi' => $request->get('Prodi'),
             'JK' => $request->get('JK'),
             'Fakultas' => $request->get('Fakultas'),
         ]);
