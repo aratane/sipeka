@@ -21,18 +21,13 @@
                         <div class="flex flex-row -mx-3 justify-center">
                             <div class="flex-none w-2/3 max-w-full px-3 ">
                                 <div>
-
                                     <h1 class="mb-2 font-bold text-center dark:text-white">SIPEKA</h1>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
         <div class="page-header min-vh-100">
             <div class="container">

@@ -23,7 +23,12 @@ class PageController extends Controller
                 ->where('mahasiswa.id', '=', auth()->user()->id)
                 ->get();
 
-            $pengajuan = Mahasiswa::latest()->paginate(5);
+            // Data Pengajuan VPPK
+            $pengajuan = DB::table('mahasiswa')
+                ->join('krs', 'mahasiswa.NIM', '=', 'krs.NIM')
+                ->where('mahasiswa.NIM', '=', 'krs.NIM')
+                ->get();
+            // dd($pengajuan);
             return view("pages.{$page}", compact('pengajuan', 'mahasiswa'));
         }
 
