@@ -49,7 +49,7 @@
                                                             alt="user1">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">{{ $data->nama }}</h6>
+                                                        <h6 class="mb-0 text-sm">{{ $data->Nm_Mahasiswa }}</h6>
                                                         <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
                                                     </div>
                                                 </div>
