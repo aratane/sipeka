@@ -81,7 +81,7 @@
                                 </div><div class="col-md-4">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Agama</label>
-                                        <input class="form-control" type="text" name="firstname" value="{{ $m->Agama }}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Agama' From Table 'Mahasiswa'">
+                                        <input class="form-control" type="text" name="Agama" value="{{ $m->Agama }}" onfocus="focused(this)" onfocusout="defocused(this)" placeholder="Get 'Agama' From Table 'Mahasiswa'">
                                     </div>
                                 </div><div class="col-md-8">
                                     <div class="form-group">
@@ -95,14 +95,14 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Alamat</label>
-                                        <input class="form-control" type="text" name="address"
+                                        <input class="form-control" type="text" name="Alamat"
                                             value="{{ $m->Alamat}}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">No Telp</label>
-                                        <input class="form-control" type="text" name="about"
+                                        <input class="form-control" type="text" name="No_Tlp"
                                             value="{{ $m->No_Tlp}}">
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Bio</label>
-                                        <input class="form-control" type="text" name="about"
+                                        <input class="form-control" type="text" name="Bio"
                                             value="{{ $m->Bio}}">
                                     </div>
                                 </div>
