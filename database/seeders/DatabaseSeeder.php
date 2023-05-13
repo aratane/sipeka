@@ -82,9 +82,17 @@ class DatabaseSeeder extends Seeder
             'id_krs' => '1',
             'SKS' => '144',
             'KD_Penasehat' => '1',
+            'Nm_Penasehat' => 'Agus',
             'IPKSebelumnya' => '2',
             'RencanaSKS' => '8 SKS',
             'NIM' => '20038289723',
+        ]);
+        DB::table('transaksi')->insert([
+            'id_transaksi' => '31213',
+            'NIM' => '20038289723',
+            'Metode_Bayar' => 'BCA',
+            'Tanggal_Bayar' => '20-12-23',
+            'Status_Transaksi' => 'belum_bayar',
         ]);
     }
 }

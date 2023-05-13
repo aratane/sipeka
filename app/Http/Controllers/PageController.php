@@ -13,9 +13,14 @@ class PageController extends Controller
      * @param string $page
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(string $page)
     {
-        return view("pages.document");
+        if (view()->exists("pages.{$page}")) {
+            $pengajuan = Mahasiswa::latest()->paginate(5);
+            return view("pages.{$page}", compact('pengajuan'));
+        }
+
+        return abort(404);
     }
 
     public function profile()

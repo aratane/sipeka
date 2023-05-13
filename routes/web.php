@@ -34,7 +34,7 @@ Route::get('/', function () {
 
 Route::get('pengajuan', [PengajuanController::class, 'pengajuan'])->name('pengajuan');
 Route::get('billing', [BillingController::class, 'index'])->name('billing');
-Route::get('billing/pembayaran', [BillingController::class, 'pembayaran'])->name('pembayaran');
+Route::get('/billing/update/', [BillingController::class, 'update'])->name('update');
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest')->name('register.perform');

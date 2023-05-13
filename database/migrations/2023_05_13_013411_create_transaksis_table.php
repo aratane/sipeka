@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('krs', function (Blueprint $table) {
-            $table->id('id_krs');
-            $table->string('SKS');
-            $table->string('KD_Penasehat');
-            $table->string('Nm_Penasehat');
-            $table->string('IPKSebelumnya');
-            $table->string('RencanaSKS');
+        Schema::create('transaksi', function (Blueprint $table) {
+            $table->id('id_transaksi');
             $table->unsignedBigInteger('NIM');
             $table->foreign('NIM')->references('NIM')->on('mahasiswa');
+            $table->string('Metode_Bayar');
+            $table->string('Tanggal_Bayar');
+            $table->enum('status_transaksi', ['belum_bayar', 'sukses', 'gagal']);
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('k_r_s');
+        Schema::dropIfExists('transaksis');
     }
 };
