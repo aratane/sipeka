@@ -86,7 +86,8 @@
                         <div class="col-lg-4 card bg-primary h-1 mb-2"></div><div class="col-lg-7 card bg-secondary h-1 mb-2"></div></div><div class="d-flex justify-content-around gap-4">
                         <h6 class="col-lg-4 card badge badge-info bg-info custom-subhead-font2">Status Pengisian KRS</h6><h6 class="col-lg-7 badge badge-success bg-secondary card custom-subhead-font2">belum di approve</h6></div></div>
                 <div class="card-header col-lg-12">
-                    <form action="" method="">
+                    <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="d-flex justify-content-between gap-5">
                             <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border drop-files mt-0 mr-5 col-6">
                                 <div class="flex-auto p-4">
@@ -103,7 +104,7 @@
                                             <div>
                                                 <h6 class="mb-2 font-bold text-center dark:text-white">
                                                     Drag and drop files,or
-                                                    <input aria-label="File browser example" class="custom-file-input" id="file" placeholder="some files" type="file"/>
+                                                    <input aria-label="File browser example" class="custom-file-input" name="file" placeholder="some files" type="file"/>
                                                 </h6>
                                             </div>
                                         </div>

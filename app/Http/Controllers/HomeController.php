@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\File;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,26 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.dashboard');
+        $file = File::get();
+        return view('pages.dashboard',['file' => $file]);
+    }
+
+    public function upload(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:pdf,xlx,csv|max:2048',
+        ]);
+    
+        $fileName = time().'.'.$request->file->extension();  
+     
+        $request->file->move(public_path('suratmh'), $fileName);
+
+        File::create([
+			'file' => $fileName,
+		]);
+
+        return back()
+        ->with('success','File has been uploaded.')
+        ->with('file', $fileName);
     }
 }

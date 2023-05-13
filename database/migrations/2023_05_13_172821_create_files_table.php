@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('dockrs', function (Blueprint $table) {
             $table->id('Kd_Krs');
-            $table->string('Nm_Mahasiswa');
-            $table->string('Nm_DosenWali');
-            $table->unsignedBigInteger('NIDN');
+            $table->string('Nm_Mahasiswa')->nullable();
+            $table->string('Nm_DosenWali')->nullable();
+            $table->string('file');
+            $table->unsignedBigInteger('NIDN')->nullable();
             $table->foreign('NIDN')->references('NIDN')->on('dosen');
-            $table->unsignedBigInteger('NIM');
+            $table->unsignedBigInteger('NIM')->nullable();
             $table->foreign('NIM')->references('NIM')->on('mahasiswa');
-            $table->enum('status', ['disetujui', 'ditolak', 'diproses']);
+            $table->enum('status', ['disetujui', 'ditolak', 'diproses'])->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('files');
     }
 };
