@@ -6,12 +6,12 @@
 
         <div class="row">
             <div class="col-md-7 mt-4">
+                @include('sweetalert::alert')
+                @foreach ($transaksi as $d)
+                @if($d->status_transaksi == 'belum_bayar')
                 <div class="card">
-                    @foreach ($transaksi as $d)
-                    @if($d->status_transaksi == 'belum_bayar')
                     <div class="card-header pb-0 px-3">
                         <h6 class="mb-0">Transaksi Berlangsung</h6>
-                        @include('sweetalert::alert')
                     </div>
                     <div class="card-body pt-4 p-3">
                         <ul class="list-group">
@@ -32,7 +32,7 @@
                         </ul>
                     </div>
                 </div>
-                @elseif($d->status_transaksi == 'selesai')
+                @elseif($d->status_transaksi == 'sukses')
                 <div class="card mt-4">
                     <div class="card-header pb-0 px-3">
                         <h6 class="mb-0">Transaksi Selesai</h6>

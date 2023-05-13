@@ -32,7 +32,7 @@ Route::get('/', function () {
     return redirect('/dashboard');
 })->middleware('auth');
 Route::get('billing', [BillingController::class, 'index'])->name('billing');
-Route::get('/billing/update/', [BillingController::class, 'update'])->name('update');
+Route::get('/billing/update/{id_transaksi}', [BillingController::class, 'update'])->name('update');
 
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest')->name('register.perform');
