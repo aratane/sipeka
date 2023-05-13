@@ -35,11 +35,21 @@ class UserProfileController extends Controller
         auth()->user()->update([
             'username' => $request->get('username'),
             'email' => $request->get('email'),
+        ]);
+
+        DB::table('mahasiswa')
+        ->join('users', 'mahasiswa.id', '=', 'users.id')
+        ->where('mahasiswa.id', '=', auth()->user()->id)
+        ->update([
             'Nm_Mahasiswa' => $request->get('Nm_Mahasiswa'),
-            'Prodi' => $request->get('Prodi'),
             'JK' => $request->get('JK'),
             'Fakultas' => $request->get('Fakultas'),
-        ]);
+            'Prodi' => $request->get('Prodi'),
+            'Agama' => $request->get('Agama'),
+            'Alamat' => $request->get('Alamat'),
+            'No_Tlp' => $request->get('No_Tlp'),
+            'Bio' => $request->get('Bio')
+        ]);  
             //BARU BISA UPDATE USERNAME SAMA EMAIL   
         return back()->with('succes', 'Profile succesfully updated');
     }
