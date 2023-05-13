@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KRS;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,12 +24,7 @@ class PageController extends Controller
                 ->where('mahasiswa.id', '=', auth()->user()->id)
                 ->get();
 
-            // Data Pengajuan VPPK
-            $pengajuan = DB::table('mahasiswa')
-                ->join('krs', 'mahasiswa.NIM', '=', 'krs.NIM')
-                ->where('mahasiswa.NIM', '=', 'krs.NIM')
-                ->get();
-            // dd($pengajuan);
+            $pengajuan = KRS::latest()->paginate(5);
             return view("pages.{$page}", compact('pengajuan', 'mahasiswa'));
         }
 

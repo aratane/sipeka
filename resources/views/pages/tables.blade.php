@@ -35,7 +35,7 @@
                                 </thead>
                                 <tbody>
                                     <?php $no = 1; ?>
-                                    @forelse ($mahasiswa as $data)
+                                    @forelse ($pengajuan as $data)
                                         <tr>
                                             <td>
                                                 <div class="d-flex px-2 py-1">
