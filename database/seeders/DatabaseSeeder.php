@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // Membuat Akun
         DB::table('users')->insert([
             'username' => 'admin',
             'email' => 'sanji@gmail.com',
@@ -46,10 +47,11 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'username' => 'hilman',
             'email' => 'hilman@gmail.com',
-            'password' => bcrypt('tegar123'),
+            'password' => bcrypt('hilman123'),
             'role' => 'mahasiswa',
         ]);
 
+        // Akun dengan role
         DB::table('kaprodi')->insert([
             'NIP' => '20038289723',
             'Nm_Kaprodi' => 'Tegar Firmansyah',

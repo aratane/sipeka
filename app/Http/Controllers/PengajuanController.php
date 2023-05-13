@@ -50,13 +50,13 @@ class PengajuanController extends Controller
             'Nm_Penasehat' => $request->Nm_Penasehat,
             'IPKSebelumnya' => $request->IPKSebelumnya,
             'RencanaSKS' => $request->RencanaSKS,
-            'Nm_Mahasiswa' => $request->Nm_Penasehat,
+            'Nm_Mahasiswa' => $request->Nm_Mahasiswa,
             'JK' => $request->JK,
             'Agama' => $request->Agama,
             'Alamat' => $request->Alamat,
             'NIM' => $request->NIM,
         ]);
 
-        return redirect()->route('pages.krstudi')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('pengajuan.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 }

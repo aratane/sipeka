@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use PDF;
+use Illuminate\Support\Facades\DB;
 
 class PDFController extends Controller
 {
@@ -18,7 +19,7 @@ class PDFController extends Controller
         $users = User::get();
 
         $data = [
-            'title' => 'Surat Pengantar',
+            'title' => 'Surat Pengantar ',
             'date' => date('m/d/Y'),
             'users' => $users
         ];

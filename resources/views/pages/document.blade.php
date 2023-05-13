@@ -44,7 +44,7 @@
                             <div class="author align-items-center">
                                 <i class="ni ni-collection text-warning text-sm opacity-10"></i>
                                 <div class="name ps-3">
-                                    <span><a href="{{ route('page', ['page' => 'suratkrs']) }}">KLIK UNTUK
+                                    <span><a href="{{ route('page', ['page' => 'krstudi']) }}">KLIK UNTUK
                                             GENERATE</a></span>
                                     <div class="stats">
                                         <small>Universitas Contoh</small>
