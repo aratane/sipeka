@@ -43,7 +43,7 @@
                                             <label for="example-text-input" class="form-control-label">SKS Yang
                                                 Dicapai</label>
                                             <input class="form-control" type="text" name="sks"
-                                                value="{{ $k->sks }}">
+                                                value="{{ $k->SKS }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -51,48 +51,48 @@
                                             <label for="example-text-input" class="form-control-label">IPK Yang
                                                 Dicapai</label>
                                             <input class="form-control" type="text" name="ipk"
-                                                value="{{ $k->ipk }}">
+                                                value="{{ $k->IPK }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Stambuk</label>
                                             <input class="form-control" type="text" name="stambuk"
-                                                value="{{ $k->stambuk }}">
+                                                value="{{ $k->Stambuk }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Program Studi</label>
                                             <input class="form-control" type="text" name="prodi"
-                                                value="{{ $k->prodi }}">
+                                                value="{{ $k->Prodi }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Kode
                                                 Penasehat</label>
-                                            <input class="form-control" type="text" name="city" value="">
+                                            <input class="form-control" type="text" name="city" value="{{ $k->KD_Penasehat }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Nama
                                                 Penasehat</label>
-                                            <input class="form-control" type="text" name="city" value="">
+                                            <input class="form-control" type="text" name="city" value="{{ $k->Nm_Penasehat }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">IP Semester
                                                 Lalu</label>
-                                            <input class="form-control" type="text" name="city" value="">
+                                            <input class="form-control" type="text" name="city" value="{{ $k->IPKSebelumnya }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Rencana SKS</label>
-                                            <input class="form-control" type="text" name="city" value="">
+                                            <input class="form-control" type="text" name="city" value="{{ $k->RencanaSKS }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -100,28 +100,28 @@
                                             <label for="example-text-input" class="form-control-label">Nama
                                                 Mahasiswa</label>
                                             <input class="form-control" type="text" name="city"
-                                                value="{{ $k->nama }}">
+                                                value="{{ $k->Nm_Mahasiswa }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Jenis Kelamin</label>
                                             <input class="form-control" type="text" name="city"
-                                                value="{{ $k->jenis_kelamin }}">
+                                                value="{{ $k->JK }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Agama</label>
                                             <input class="form-control" type="text" name="city"
-                                                value="{{ $k->agama }}">
+                                                value="{{ $k->Agama }}">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="example-text-input" class="form-control-label">Alamat</label>
                                             <input class="form-control" type="text" name="country"
-                                                value="{{ $k->alamat }}">
+                                                value="{{ $k->Alamat }}">
                                         </div>
                                     </div>
 
@@ -174,15 +174,15 @@
                                                                 </td>
                                                                 <td class="align-middle text-center">
                                                                     <span
-                                                                        class="text-secondary text-xs font-weight-bold">{{ $k->id_mapel }}</span>
+                                                                        class="text-secondary text-xs font-weight-bold"></span>
                                                                 </td>
-                                                                <td class=" text-center">
+                                                                <td class="text-center">
                                                                     <span class="text-secondary text-xs font-weight-bold">
-                                                                        {{ $k->nama_mapel }}</span>
+                                                                        </span>
                                                                 </td>
                                                                 <td class="align-middle text-center">
                                                                     <span class="text-secondary text-xs font-weight-bold">
-                                                                        {{ $k->sks_mapel }}</span>
+                                                                        </span>
                                                                     </span>
                                                                 </td>
                                                                 <td class="align-middle text-center">

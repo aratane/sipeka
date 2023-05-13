@@ -77,5 +77,14 @@ class DatabaseSeeder extends Seeder
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s"),
         ]);
+
+        DB::table('krs')->insert([
+            'id_krs' => '1',
+            'SKS' => '144',
+            'KD_Penasehat' => '1',
+            'IPKSebelumnya' => '2',
+            'RencanaSKS' => '8 SKS',
+            'NIM' => '20038289723',
+        ]);
     }
 }
