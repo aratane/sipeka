@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreign('NIDN')->references('NIDN')->on('dosen');
             $table->unsignedBigInteger('NIM')->nullable();
             $table->foreign('NIM')->references('NIM')->on('mahasiswa');
-            $table->enum('status', ['disetujui', 'ditolak', 'diproses'])->nullable();
+            $table->enum('status', ['disetujui', 'ditolak', 'diproses'])->default('diproses');
             $table->timestamps();
         });
     }
