@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('Agama');
             $table->string('Alamat');
             $table->string('IPK');
+            $table->string('SKS');
             $table->string('Stambuk');
             $table->unsignedBigInteger('No_Tlp');
             $table->string('Bio');

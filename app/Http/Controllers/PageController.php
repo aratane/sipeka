@@ -21,11 +21,19 @@ class PageController extends Controller
             // Mahasiswa Data
             $mahasiswa = DB::table('mahasiswa')
                 ->join('users', 'mahasiswa.NIM', '=', 'users.NIM')
+                ->join('dosen', 'mahasiswa.NIDN', '=', 'dosen.NIDN')
+                ->where('mahasiswa.NIM', '=', auth()->user()->NIM)
+                ->get();
+            // dd($mahasiswa);
+
+            // Histori KRS
+            $hiskrs = DB::table('krs')
+                ->join('mahasiswa', 'krs.NIDN', '=', 'mahasiswa.NIDN')
                 ->where('mahasiswa.NIM', '=', auth()->user()->NIM)
                 ->get();
 
             $pengajuan = KRS::latest()->paginate(5);
-            return view("pages.{$page}", compact('pengajuan', 'mahasiswa'));
+            return view("pages.{$page}", compact('pengajuan', 'mahasiswa', 'hiskrs'));
         }
 
         return abort(404);

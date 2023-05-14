@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('Stambuk');
             $table->string('Prodi');
             $table->string('Fakultas');
-            $table->string('Nm_Dosen');
+            $table->string('Nm_Dosen')->nullable();
             $table->string('IPKSebelumnya');
             $table->string('RencanaSKS');
             $table->string('Nm_Mahasiswa');
@@ -29,8 +29,9 @@ return new class extends Migration
             $table->string('Alamat');
             $table->unsignedBigInteger('NIM');
             $table->foreign('NIM')->references('NIM')->on('mahasiswa');
-            $table->unsignedBigInteger('NIDN');
+            $table->unsignedBigInteger('NIDN')->nullable();
             $table->foreign('NIDN')->references('NIDN')->on('dosen');
+            $table->enum('status', ['disetujui', 'ditolak', 'diproses'])->default('diproses');
             $table->timestamps();
         });
     }

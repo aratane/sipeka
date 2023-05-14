@@ -12,11 +12,19 @@ class PengajuanController extends Controller
     public function index()
     {
         $mahasiswa = DB::table('mahasiswa')
-            ->join('users', 'mahasiswa.id', '=', 'users.id')
-            ->where('mahasiswa.id', '=', auth()->user()->id)
+            ->join('users', 'mahasiswa.NIM', '=', 'users.NIM')
+            ->join('dosen', 'mahasiswa.NIDN', '=', 'dosen.NIDN')
+            ->where('mahasiswa.NIM', '=', auth()->user()->NIM)
             ->get();
         //dd($mahasiswa);
-        return view('pages.krstudi', compact('mahasiswa'));
+
+        // Histori KRS
+        $hiskrs = DB::table('krs')
+            ->join('mahasiswa', 'krs.NIDN', '=', 'mahasiswa.NIDN')
+            ->where('mahasiswa.NIM', '=', auth()->user()->NIM)
+            ->get();
+
+        return view('pages.krstudi', compact('mahasiswa', 'hiskrs'));
     }
 
     public function store(Request $request)
@@ -28,8 +36,8 @@ class PengajuanController extends Controller
             'Stambuk'   => 'required',
             'Prodi'   => 'required',
             'Fakultas' => 'required',
-            'KD_Penasehat' => 'required',
-            'Nm_Penasehat' => 'required',
+            'NIDN' => 'required',
+            'Nm_Dosen' => 'required',
             'IPKSebelumnya' => 'required',
             'RencanaSKS' => 'required',
             'Nm_Mahasiswa' => 'required',
@@ -46,15 +54,15 @@ class PengajuanController extends Controller
             'Stambuk'   => $request->Stambuk,
             'Prodi'   => $request->Prodi,
             'Fakultas' => $request->Fakultas,
-            'KD_Penasehat' => $request->KD_Penasehat,
-            'Nm_Penasehat' => $request->Nm_Penasehat,
+            'NIDN' => $request->NIDN,
+            'Nm_Dosen' => $request->Nm_Dosen,
             'IPKSebelumnya' => $request->IPKSebelumnya,
             'RencanaSKS' => $request->RencanaSKS,
             'Nm_Mahasiswa' => $request->Nm_Mahasiswa,
             'JK' => $request->JK,
             'Agama' => $request->Agama,
             'Alamat' => $request->Alamat,
-            'NIM' => $request->NIM,
+            'NIM' => $request->NIM
         ]);
 
         return redirect()->route('pengajuan.index')->with(['success' => 'Data Berhasil Disimpan!']);
