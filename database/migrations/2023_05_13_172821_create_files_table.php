@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('dockrs', function (Blueprint $table) {
             $table->id('id_file');
             $table->string('Nm_Mahasiswa')->nullable();
-            $table->string('Nm_DosenWali');
-            $table->unsignedBigInteger('NIDN');
+            $table->string('Nm_DosenWali')->nullable();
+            $table->string('file');
+            $table->unsignedBigInteger('NIDN')->nullable();
             $table->foreign('NIDN')->references('NIDN')->on('dosen');
             $table->unsignedBigInteger('NIM')->nullable();
             $table->foreign('NIM')->references('NIM')->on('mahasiswa');
