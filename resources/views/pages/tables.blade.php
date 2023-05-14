@@ -24,10 +24,10 @@
                                             PRODI</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            STATUS KELULUSAN MATKUL</th>
+                                            STATUS PENGAJUAN</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            TANGGAL</th>
+                                            DIAJUKAN PADA TANGGAL</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Action</th>
@@ -50,23 +50,26 @@
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center">
                                                         <h6 class="mb-0 text-sm">{{ $data->Nm_Mahasiswa }}</h6>
-                                                        <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                                                        <p class="text-xs text-secondary mb-0">{{ $data->NIM }}</p>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
-                                                <p class="text-xs font-weight-bold mb-0">{{ $data->fakultas }}</p>
-                                                <p class="text-xs text-secondary mb-0">{{ $data->prodi }}</p>
+                                                <p class="text-xs font-weight-bold mb-0">{{ $data->Fakultas }}</p>
+                                                <p class="text-xs text-secondary mb-0">{{ $data->Prodi }}</p>
                                             </td>
                                             <td class="align-middle text-center text-sm">
-                                                @if ($data->status_lulus == 'tidaklulus')
-                                                    <label class="btn btn-danger">TIDAK LULUS</label>
+                                                @if ($data->status == 'diproses')
+                                                    <label class="btn btn-info">SEDANG DI PROSES</label>
+                                                @elseif($data->status == 'disetujui')
+                                                    <label class="btn btn-success">DISETUJUI</label>
                                                 @else
-                                                    <label class="btn btn-success">LULUS</label>
+                                                    <label class="btn btn-danger">DITOLAK</label>
                                                 @endif
                                             </td>
                                             <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                                <span
+                                                    class="text-secondary text-xs font-weight-bold">{{ $data->created_at }}</span>
                                             </td>
                                             <td class="align-middle text-center">
 
@@ -121,19 +124,15 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
-
-
                                             </td>
                                         </tr>
                                     @empty
                                         <div class="alert alert-danger">
-                                            Data Post belum tersedia.
+                                            Data Pengajuan belum tersedia.
                                         </div>
                                     @endforelse
                                 </tbody>
                             </table>
-                            {{ $pengajuan->links() }}
                         </div>
                     </div>
                 </div>

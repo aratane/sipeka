@@ -32,7 +32,12 @@ class PageController extends Controller
                 ->where('mahasiswa.NIM', '=', auth()->user()->NIM)
                 ->get();
 
-            $pengajuan = KRS::latest()->paginate(5);
+            // Pengajuan KRS
+            $pengajuan = DB::table('krs')
+                ->join('dosen', 'krs.NIDN', '=', 'dosen.NIDN')
+                ->where('dosen.NIDN', '=', auth()->user()->NIDN)
+                ->get();
+
             return view("pages.{$page}", compact('pengajuan', 'mahasiswa', 'hiskrs'));
         }
 
