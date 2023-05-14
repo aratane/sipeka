@@ -48,7 +48,8 @@
                                 <span class="mb-2 text-xs">Email Address: <span
                                         class="text-dark ms-sm-2 font-weight-bold">gagapdesign@burrito.com</span></span>
                                 <span class="text-xs">ID Transaksi<span
-                                        class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                                        class="text-dark ms-sm-2 font-weight-bold">{{
+                                            $d->id_transaksi}}</span></span>
                             </div>
                             <div class="ms-auto text-end">
                                 <a href="/" type="button" class="btn btn-info">Lihat Detail</a>
